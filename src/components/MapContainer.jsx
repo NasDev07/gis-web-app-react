@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import MapControls from './MapControls';
 import LegendPanel from './LegendPanel';
 import LoadingOverlay from './LoadingOverlay';
+import mapImage from '/images.jpg';
 
 const MapContainer = ({
     zoom, pan, setZoom, setPan,
@@ -243,7 +244,7 @@ const MapContainer = ({
                 ref={mapRef}
                 style={{
                     transform: `scale(${zoom}) translate(${pan.x / zoom}px, ${pan.y / zoom}px)`,
-                    backgroundImage: `url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80')`,
+                    backgroundImage: `url(${mapImage})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
